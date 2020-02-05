@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maaz Arif</title>
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/style2.css"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'> 
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+<script>
+$(document).ready(function() {
+    $('a[href*=\\#]').each(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+        && location.hostname == this.hostname
+        && this.hash.replace(/#/,'') ) {
+            var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+            var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+            if ($target) {
+                var targetOffset = $target.offset().top;
+                $(this).click(function() {
+                    $("#nav li a").removeClass("active"); 
+                    $(this).addClass("active");
+                    $('html, body').animate({scrollTop: targetOffset}, 1000);
+                    return false;
+                });
+            }
+        }
+    });
+});
+
+</script>
+</head>
+
+
+<body>
+    <header id="header">
+        <div class="content">
+            <div id="logo">
+                <a href="#slide1">
+                    <img src="Maaz-Arif/logo.png" style="height: 80px;">
+                </a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#slide1" title="introduction" class="active">Intoduction</a></li>
+                    <li><a href="#slide2" title="story">My Story</a></li>
+                    <li><a href="#slide3" title="projects">Projects</a></li>
+                    <li><a href="#slide5" title="end">The End</a></li>
+                </ul>
+                <div class="toggle" onclick="toggle()"></div>
+            </nav>
+        </div>
+
+    </header>
+    <!--SLIDES START-->
+    <!--Slide 1-->
+    <div id="slide1">
+        <div class="content">
+            <h1>Name: Maaz Arif</h1>
+            <h2>Occupation: coder_</h2>
+        </div>
+    </div>
+    <!--Slide 2-->
+    <div id="slide2">
+        <div class="content">
+            <h1>My Story</h1>
+            <div class="quotes_container" style="background-color: gray;">
+                <div style="width: 400px; float:left; height:500px; background:gray; margin:10px">
+                    <h2 class="year">2019</h2>
+                </div>
+                <div style="width: 400px; float:right; height:500px; margin:10px">
+                    <h2>TimeLine</h2>
+
+                    <div class="timeline">
+                        <div class="container left">
+                            <div class="timeline_content"> 
+                              <h3 style="color: black; text-align: right;">2020</h3>
+                              <p>Launched QuesTime</p>
+                            </div>
+                          </div>
+
+                        <div class="container right">
+                          <div class="timeline_content"> 
+                            <h3 style="color: black; text-align: left;">2019</h3>
+                            <p>Lorem ipsum..</p>
+                          </div>
+                        </div>
+                        <div class="container left">
+                          <div class="timeline_content">
+                            <h3 style="color: black; text-align: right;">2018</h3>
+                            <p>Lorem ipsum..</p>
+                          </div>
+                        </div>
+                        <div class="container right">
+                            <div class="timeline_content">
+                              <h3 style="color: black; text-align: left;">2017</h3>
+                              <p>Started Programming</p>
+                            </div>
+                          </div>
+                      </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Slide 3-->
+    <div id="slide3">
+        <div class="content">
+            <div class="quotes_container">
+                <h1>Projects</h1>
+                <ul class="project_list">
+                    <li>
+                        <img src="img/c-logo.png">
+                    </li>
+                    <li>
+                        <img src="img/ISO_C++_Logo.svg">
+                    </li>
+                    <li>
+                        <img src="img/flutter-logo.png">
+                    </li>
+                    <li>
+                        <img src="img/python-logo.png">
+                    </li>
+                    <li>
+                        <img src="img/htmlcss-logo.png">
+                    </li>
+                </ul>
+            </div> 
+        </div> 
+    </div> 
+
+    <!--Slide 5-->
+    <div id="slide5">
+        <div class="content">
+            <div class="quotes_container">
+                <h1>THE END</h1>
+            </div>
+            <div id="copyright">
+                <!--
+                <h3 style="text-align: left;">Maaz Enterprises®</h3>
+                <img src="img/GitHub_Logo_White.png" alt="Github" style="height:100px;">
+                -->
+                <ul class="footerlist">
+                    <li>
+                        <h3 style="text-align: left;">Maaz Enterprises®</h3>
+                    </li>
+                    <li>
+                        <a href="https://github.com/" >
+                            <img src="img/GitHub-Mark-Light-120px-plus.png" alt="Github" style="height:40px;">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://discordapp.com/channels/@me">
+                            <img src="img/iconfinder_discord_2308078.svg" alt="Discord" style="height:40px;">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+    <!--SLIDES END-->
+    <script type="text/javascript">
+        function toggle(){
+            var header = document.getElementById("nav")
+            header.classList.toggle('active')
+        }
+    </script>
+  
+
+</body>
+</html>
