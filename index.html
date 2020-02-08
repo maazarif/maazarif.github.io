@@ -14,6 +14,10 @@
 <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'> 
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 <script>
 $(document).ready(function() {
     $('a[href*=\\#]').each(function() {
@@ -47,14 +51,43 @@ $(document).ready(function() {
                     <img src="Maaz-Arif/logo.png" style="height: 80px;">
                 </a>
             </div>
-            <nav id="nav">
+
+            <a href="javascript:void(0);" class="icon">
+                <i class="fa fa-bars" ></i>
+              </a>
+        
+            <!--
+            <div class="toggle" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            -->
+            <nav id="nav" class="nav">
+                <!--
+                <input type="checkbox"id="check">
+                <label for="check" class="check_btn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                 -->
                 <ul>
-                    <li><a href="#slide1" title="introduction" class="active">Intoduction</a></li>
-                    <li><a href="#slide2" title="story">My Story</a></li>
-                    <li><a href="#slide3" title="projects">Projects</a></li>
-                    <li><a href="#slide5" title="end">The End</a></li>
+                    <li class="items"><a href="#slide1" title="introduction" class="active">Intoduction</a></li>
+                    <li class="items"><a href="#slide2" title="story">My Story</a></li>
+                    <li class="items"><a href="#slide3" title="projects">Projects</a></li>
+                    <li class="items"><a href="#slide5" title="end">The End</a></li>
+                    <!--
+                    <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars" ></i>
+                      </a></li>
+                      -->
                 </ul>
-                <div class="toggle" onclick="toggle()"></div>
+                <!--
+                <div class="toggle" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            -->
             </nav>
         </div>
 
@@ -62,20 +95,23 @@ $(document).ready(function() {
     <!--SLIDES START-->
     <!--Slide 1-->
     <div id="slide1">
-        <div class="content">
-            <h1>Name: Maaz Arif</h1>
-            <h2>Occupation: coder_</h2>
+        <div class="content" >
+            <h1>Maaz Arif</h1>
+            <h2>Student/Coder</h2>
+            <h3 style="color: white; text-align: left;">dream to difference</h3>
         </div>
     </div>
     <!--Slide 2-->
     <div id="slide2">
-        <div class="content">
+        <div class="content" >
             <h1>My Story</h1>
+            <!--
             <div class="quotes_container" style="background-color: gray;">
-                <div style="width: 400px; float:left; height:500px; background:gray; margin:10px">
+                <div style="width: 400px; float:left; height:500px;  margin:10px">
                     <h2 class="year">2019</h2>
                 </div>
-                <div style="width: 400px; float:right; height:500px; margin:10px">
+            -->
+                <div style="width: 400px; float:left; height:600px; margin:50px">
                     <h2>TimeLine</h2>
 
                     <div class="timeline">
@@ -114,7 +150,7 @@ $(document).ready(function() {
     <!--Slide 3-->
     <div id="slide3">
         <div class="content">
-            <div class="quotes_container">
+            <div class="quotes_container" >
                 <h1>Projects</h1>
                 <ul class="project_list">
                     <li>
@@ -140,7 +176,7 @@ $(document).ready(function() {
     <!--Slide 5-->
     <div id="slide5">
         <div class="content">
-            <div class="quotes_container">
+            <div class="quotes_container" >
                 <h1>THE END</h1>
             </div>
             <div id="copyright">
@@ -148,6 +184,7 @@ $(document).ready(function() {
                 <h3 style="text-align: left;">Maaz Enterprises®</h3>
                 <img src="img/GitHub_Logo_White.png" alt="Github" style="height:100px;">
                 -->
+                <hr>
                 <ul class="footerlist">
                     <li>
                         <h3 style="text-align: left;">Maaz Enterprises®</h3>
@@ -166,12 +203,27 @@ $(document).ready(function() {
             </div>
         </div> 
     </div>
-    <!--SLIDES END-->
+    <!--SLIDES END -->
     <script type="text/javascript">
-        function toggle(){
-            var header = document.getElementById("nav")
-            header.classList.toggle('active')
+   /*
+        function myFunction() {
+            console.log("inside myFunction");
+            var x = document.getElementById("nav");
+            if(x.className === "nav") {
+                x.className += "responsive";
+            } else {
+                x.className = "nav";
+            }
+            console.log("Class Name is: " + x.className);
         }
+        */
+        $(document).ready(function(){
+            $('.icon').click(function(){
+                $('.icon').toggleClass('active')
+                $('nav').toggleClass('active')
+            })
+        })
+
     </script>
   
 
