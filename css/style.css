@@ -3,6 +3,15 @@ body{
     padding: 0;
     width: 100%;
 }
+
+.blink_me {
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {  
+    50% { opacity: 0; }
+  }
+
 h1{
     font-family: "Arvo";
     font-weight: normal;
@@ -26,7 +35,7 @@ h3{
     font-weight: normal;
     font-size: 16px;
     text-align: center;
-    margin: 5px 0;
+    margin: 0px 0;
     padding: 0;
     z-index: 1;
     position: relative;
@@ -46,7 +55,7 @@ p{
     padding-top: 0px;
 }
 .center{margin: 0 auto;}
-.content{margin: 0 auto; width: 1000px;}
+.content{margin: 0 auto; width: 70%;}
 .clear{clear:both;}
 #header{
     width: 100%;
@@ -54,6 +63,13 @@ p{
     position: fixed;
     margin-top: 20px;
 /*    background-color: black;*/
+}
+.header_controller{
+    background-color: #333; /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 nav {width: 470px; float:right; margin-top: 10px;}
 #logo a{
@@ -76,8 +92,10 @@ nav li{
     float: left;
     padding-left: 21px;
 }
-nav ul li a { color: #fff; opacity:0.6; font-size: 18px; text-decoration: none; font-family: 'Wellfleet'; }
+nav ul li a { color:white; opacity:1; font-size: 18px; text-decoration: none; font-family: 'Wellfleet'; }
+/*
 nav ul li a.active { color: #fff; opacity:1; border-bottom: 2px solid #fff; }
+*/
 nav li a:hover { color: blue; opacity:1; }
 
 .toggle
@@ -102,7 +120,7 @@ nav li a:hover { color: blue; opacity:1; }
 
 .author_name_white { font-family:"Wellfleet"; margin: 70px 0 0 75px; color: #fff; font-size: 20px; } 
 .author_name_gray { font-family:"Wellfleet"; margin: 70px 0 0 75px; color: #94a4a4; font-size: 20px; } 
-.quotes_container { width: 100%; margin: 0 auto; }
+.quotes_container { width: 100%; margin: 0 auto; background-color: blue;}
 
 #slide1, #slide2{ width: 100%; }
 #slide1{
@@ -110,7 +128,7 @@ nav li a:hover { color: blue; opacity:1; }
 background: url('../img/illuminated-cityscape-against-blue-sky-at-night-316093.jpg') 50% 0 no-repeat fixed;
 background-color: black;
 color: #000;
-height: 600px;
+height: 400px;
 margin: 0;
 padding: 200px 0 260px 0;
 background-size: cover;
@@ -125,18 +143,22 @@ overflow: hidden;
 padding: 200px 0;
 }
 #slide3{
-background-color: black;
+background-color: rgb(0, 0, 0);
 color: #fff;
-height: 600px;
-padding: 200px 0;
+height: 1000px;
+padding: 150px 0;
 background-size: cover;
 }
 #slide5{
 background: url('../img/abstract-painting-3435264.jpg') 50% 0 no-repeat fixed;
 background-color: #000;
-height: 200px;
+height: 300px;
 margin: 0 auto;
-padding: 250px 0;
+padding-right: 250px;
+padding-left: 250px;
+padding-top: 100px;
+padding-bottom: 250px;
+/*padding: 250px 0;*/
 background-size: cover;
 }
 
@@ -145,7 +167,7 @@ background-size: cover;
     position: relative;
     /*max-width: 1200px;*/
     margin: 0 auto;
-  }
+}
 
   /* The actual timeline (the vertical ruler) */
 .timeline::after {
@@ -227,38 +249,115 @@ background-size: cover;
     height: 60px; /*changed*/
 }
 
+.questime{
+    height: 200px; float: left;
+}
+
+.gitpic{
+    height: 200px; float: left; margin-right: 40px; margin-bottom: 30px;
+}
+
+.athantime{
+    height: 200px; float: left; margin-right: 30px; margin-bottom: 20px;
+}
+
+.app_name{
+    font-size: 35px;
+}
+
+.app_desc{
+    font-size: 20px;
+}
+
 .footerlist{
     list-style: none;
     display: block;
     margin: 0 auto;
 }
 .footerlist li{
-    margin-top: 9px;
-    float: left;
-    padding-left: 21px;
+    margin-top: 0px;
+    padding-left: 10px;
 }
 
-.project_list{
+/*
+.language{
+    width: 495px;
+    width: 50%;
+    border: 5px solid white;
+    border-bottom: 5px solid white;
+    height: 500px;
+    float: left;
+}
+
+.language_list{
     list-style: none;
     display: block;
     margin: 0 auto;
 }
-.project_list li{
+.language_list li{
     margin-top: 9px;
     float: left;
-    padding: 21px;
+    padding: 15px;
 }
-.project_list li img{
-    height: 100px;
+.language_list li img{
+    height: 50px;
+}
+*/
+
+
+.projects{
+    width: 95%;
+    height: 700px;
+    /*
+    border: 5px solid white;
+    border-bottom: 5px solid white;
+    */
 }
 
+.button{
+    /*background-color: #4CAF50;  Green */
+    border: 5px solid white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button:hover{
+    background-color: #351D7C;
+}
+
+.maaz{
+    text-align: center;
+    font-size: 20px;
+}
+
+.git_foot{
+    height:40px;
+    float: left;
+    padding-right: 10px;
+}
+
+.dis_foot{
+    height: 40px;
+}
 
 #copyright { color: #fff; font-family:"Wellfleet"; font-size: 14px; margin-top: 200px; text-align: left; }
 #copyright a { text-decoration: none; color: #fff; }
 
 
+/* MAX WIDTH 1250  */
+@media screen and (max-width: 1250px){
+
+
+}
+
+
+
 /*Responsive app i need a menu icon*/
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 785px)
 {
     .content{margin: 0 auto; width: 100%;}
     h1{
@@ -268,12 +367,19 @@ background-size: cover;
         font-size: 4.0vw;
     }
     h3{
-        font-size: 3.5vw;
+        font-size: 3.0vw;
     }
     p{
         font-size: 2.5vw;
     }
+    .language{
+        width: 50%;
 
+    }
+    .projects{
+        width: 95%;
+    }
+    
     .icon{
         float: right;
         display: block;
@@ -287,9 +393,21 @@ background-size: cover;
 
 }
 
-
-@media screen and (max-width: 1000px)
+/*ACTIVE BUTTONS*/
+@media screen and (max-width: 785px)
 {
+    h1{
+        margin-left: 0px;
+    }
+    h2{
+        margin-left: 0px;
+    }
+    h3{
+
+    }
+    h4{
+
+    }
     nav{
         display: none;
     }
@@ -304,6 +422,62 @@ background-size: cover;
     nav.active li a{
         display: block;
         font-size: 10px; 
+    }
+
+    /*SLIDE 4*/
+    .questime{
+        height: 200px; float: left;
+    }
+    
+    .gitpic{
+        height: 200px; float: left; margin-right: 40px; margin-bottom: 30px;
+    }
+    
+    .athantime{
+        height: 200px; float: left; margin-right: 30px; margin-bottom: 20px;
+    }
+    
+    .app_name{
+        font-size: 3vw;
+    }
+    
+    .app_desc{
+        font-size: 2.6vw;
+    }
+
+
+
+
+
+    /* SLIDE 5 RESPONSIVENESS*/
+    .title5 {
+        font-size: 4vw;
+    }
+
+    .button{
+        /*background-color: #4CAF50;  Green */
+        border: 5px solid white;
+        color: white;
+        padding: 10px 22px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 1.6vw;
+    }
+
+
+    .footerlist li{
+        margin-top: 0px;
+        padding-left: 0px;
+    }
+    .maaz{
+        font-size: 1.5vw;
+    }
+    .git_foot{
+        height: 20px;
+    }
+    .dis_foot{
+        height: 20px;
     }
     
 }
@@ -323,12 +497,36 @@ background-size: cover;
         padding: 12px; /* Add some padding */
         text-decoration: none; /* Remove underline from links */   
     }
+    /*
     nav.active li a:hover{
-    
+        background-color: red; 
     }
+
     .nav.active li a.active {
-        background-color: rgb(56, 11, 191); /* Add a green color to the "active/current" link */
+        background-color: rgb(56, 11, 191);  Add a green color to the "active/current" link 
         color: white;
+    }*/
+
+
+    .applogo{
+        height: 100px;
+    }
+
+    .center_footer{
+        width: 100%;
+    }
+
+    .maaz{
+        font-size: 1.0vw;
+    }
+    .git_foot{
+        height: 15px;
+    }
+    .dis_foot{
+        height: 15px;
     }
 
 }
+
+
+/* MAX WIDTH === 500*/

@@ -29,7 +29,7 @@ $(document).ready(function() {
             if ($target) {
                 var targetOffset = $target.offset().top;
                 $(this).click(function() {
-                    $("#nav li a").removeClass("active"); 
+                    //$("#nav li a").removeClass("active"); 
                     $(this).addClass("active");
                     $('html, body').animate({scrollTop: targetOffset}, 1000);
                     return false;
@@ -39,11 +39,25 @@ $(document).ready(function() {
     });
 });
 
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar 
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("header_controller").style.top = "0";
+  } else {
+    document.getElementById("header_controller").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+*/
 </script>
 </head>
 
 
 <body>
+
+    <div class="header_controller">
     <header id="header">
         <div class="content">
             <div id="logo">
@@ -71,10 +85,10 @@ $(document).ready(function() {
                 </label>
                  -->
                 <ul>
-                    <li class="items"><a href="#slide1" title="introduction" class="active">Intoduction</a></li>
-                    <li class="items"><a href="#slide2" title="story">My Story</a></li>
+                    <li class="items"><a href="#slide1" title="introduction">Intoduction</a></li>
+                    <li class="items"><a href="#slide2" title="story">About</a></li>
                     <li class="items"><a href="#slide3" title="projects">Projects</a></li>
-                    <li class="items"><a href="#slide5" title="end">The End</a></li>
+                    <li class="items"><a href="#slide5" title="end">Contact</a></li>
                     <!--
                     <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
                         <i class="fa fa-bars" ></i>
@@ -92,12 +106,15 @@ $(document).ready(function() {
         </div>
 
     </header>
+</div>
     <!--SLIDES START-->
     <!--Slide 1-->
     <div id="slide1">
         <div class="content" >
-            <h1>Maaz Arif</h1>
-            <h2>Student/Coder</h2>
+            <h1 style="float: left;text-align:left;">Maaz Arif</h1> 
+            <h1 class="blink_me" style="float:left;">_</h1>
+           
+            <h2 style="clear:both;">Student/Coder</h2>
             <h3 style="color: white; text-align: left;">dream to difference</h3>
         </div>
     </div>
@@ -111,6 +128,7 @@ $(document).ready(function() {
                     <h2 class="year">2019</h2>
                 </div>
             -->
+            <!--
                 <div style="width: 400px; float:left; height:600px; margin:50px">
                     <h2>TimeLine</h2>
 
@@ -143,80 +161,158 @@ $(document).ready(function() {
                       </div>
 
                 </div>
+            
             </div>
+            -->
         </div>
     </div>
 
     <!--Slide 3-->
     <div id="slide3">
         <div class="content">
-            <div class="quotes_container" >
-                <h1>Projects</h1>
-                <ul class="project_list">
-                    <li>
-                        <img src="img/c-logo.png">
-                    </li>
-                    <li>
-                        <img src="img/ISO_C++_Logo.svg">
-                    </li>
-                    <li>
-                        <img src="img/flutter-logo.png">
-                    </li>
-                    <li>
-                        <img src="img/python-logo.png">
-                    </li>
-                    <li>
-                        <img src="img/htmlcss-logo.png">
-                    </li>
-                </ul>
-            </div> 
+            
+                <h1>Things I worked on</h1>
+            <!--    
+                <div class="language">
+
+                    <ul class="language_list">
+                        <li>
+                            <img src="img/c-logo.png" style="background-color: yellow;">
+                            <p>C language</p>
+                        </li>
+                        <li>
+                            <img src="img/ISO_C++_Logo.svg">
+                            <p>C++ language</p>
+                        </li>
+                        <li>
+                            <img src="img/flutter-logo.png">
+                            <p>Flutter</p>
+                        </li>
+                        <li>
+                            <img src="img/python-logo.png">
+                            <p>Python</p>
+                        </li>
+                        <li>
+                            <img src="img/htmlcss-logo.png">
+                            <p>HTML/CSS</p>
+                        </li>
+                    </ul>
+                    
+                </div>
+            -->
+                <div class="projects">
+                    <ul style="list-style-type: none;">
+
+                        <li>
+                            <p class="app_name">QuesTime
+                                <img src="img/questime.png"  class="questime">
+                            </p>
+                            <p class="app_desc">
+                                This app will help to maintain and arrange your daily tasks, to-do lists, and much more. It is organized to store information to remind you of important tasks.
+                            </p>
+                            <p class="tech_used">Flutter and Firebase</p>
+                            <h2 style="clear:both;"></h2>
+                            <p>
+                                <a href="https://apps.apple.com/app/questime/id1494106584" target="_blank" >
+                                    <img src="img/app-storeBlue.png" style="height: 40px;">
+                                </a>
+                                &nbsp;&nbsp;&nbsp;
+                                <a href="https://github.com/maazarif/Quest-Time" target="_blank">
+                                    <img src="img/GitHub-Mark-Light-120px-plus.png" alt="Github" style="height:40px;" class="github">
+                                </a>
+                            </p>
+
+                        </li>
+
+
+                        <hr>
+                        <li>
+                            <p  class="app_name">GitPic
+                                <img src="img/gitpic.png"  class="gitpic">
+                            </p>
+                            <p class="app_desc">School project details</p>
+                            <p class="tech_used">Android Studio, Java, XML and Firebase</p>
+                            <h2 style="clear:both;"></h2>
+
+                            <p>
+                                <a href="https://github.com/mike-herz/gitpic" target="_blank">
+                                    <img src="img/GitHub-Mark-Light-120px-plus.png" alt="Github" style="height:40px;" class="github">
+                                </a>
+                            </p>
+
+                        </li>
+                        <hr>
+
+
+                        <li>
+                            <p  class="app_name">AthanTime
+                                <img src="Maaz-Arif/newAthanTimeLogo.png"  class="athantime">
+                            </p>
+                            <p  class="app_desc">
+                                If you on the notifications button you will be notified with Adhan timings. The location is accessible through the settings and prayer calculation methods can be altered too!
+                            </p>
+                            <p class="tech_used">Flutter and Google Maps API</p>
+                            <h2 style="clear:both;"></h2>
+
+                            <p>
+                                <a href="https://apps.apple.com/us/app/athantime/id1525102203" target="_blank">
+                                    <img src="img/app-storeBlue.png" style="height: 40px;">
+                                </a>
+                                &nbsp;&nbsp;&nbsp;
+                                <a href="https://github.com/maazarif/AthanTime" target="_blank">
+                                    <img src="img/GitHub-Mark-Light-120px-plus.png" alt="Github" style="height:40px;" class="github">
+                                </a>
+                            </p>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            
         </div> 
     </div> 
 
     <!--Slide 5-->
     <div id="slide5">
         <div class="content">
-            <div class="quotes_container" >
-                <h1>THE END</h1>
-            </div>
+            <!--<div class="quotes_container" > -->
+                <h1 class="title5">Get In Touch</h1>
+                <p>
+                    <a href="mailto:maazarif11@gmail.com" target="_blank" class="button">Send email</a>
+
+                </p>
+            <!--</div> -->
             <div id="copyright">
                 <!--
                 <h3 style="text-align: left;">Maaz Enterprises®</h3>
                 <img src="img/GitHub_Logo_White.png" alt="Github" style="height:100px;">
                 -->
                 <hr>
-                <ul class="footerlist">
-                    <li>
-                        <h3 style="text-align: left;">Maaz Enterprises®</h3>
-                    </li>
-                    <li>
-                        <a href="https://github.com/" >
-                            <img src="img/GitHub-Mark-Light-120px-plus.png" alt="Github" style="height:40px;">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://discordapp.com/channels/@me">
-                            <img src="img/iconfinder_discord_2308078.svg" alt="Discord" style="height:40px;">
-                        </a>
-                    </li>
-                </ul>
+
+                <div class="center_footer">
+                    <ul class="footerlist">
+                        <li>
+                            <h3 class="maaz">Made by Maaz Arif with HTML and CSS</h3>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/" target="_blank" >
+                                <img src="img/GitHub-Mark-Light-120px-plus.png" alt="Github"  class="git_foot">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://discordapp.com/channels/@me" >
+                                <img src="img/iconfinder_discord_2308078.svg" alt="Discord"  class="dis_foot">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div> 
     </div>
     <!--SLIDES END -->
     <script type="text/javascript">
-   /*
-        function myFunction() {
-            console.log("inside myFunction");
-            var x = document.getElementById("nav");
-            if(x.className === "nav") {
-                x.className += "responsive";
-            } else {
-                x.className = "nav";
-            }
-            console.log("Class Name is: " + x.className);
-        }
-        */
         $(document).ready(function(){
             $('.icon').click(function(){
                 $('.icon').toggleClass('active')
