@@ -130,7 +130,7 @@ background-color: black;
 color: #000;
 height: 400px;
 margin: 0;
-padding: 200px 0 260px 0;
+padding: 200px 0 260px 0; /**/
 background-size: cover;
 }
 #slide2{
@@ -396,6 +396,14 @@ background-size: cover;
 /*ACTIVE BUTTONS*/
 @media screen and (max-width: 785px)
 {
+
+    #slide5{
+        padding-right: 150px;
+        padding-left: 150px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
     h1{
         margin-left: 0px;
     }
@@ -425,18 +433,19 @@ background-size: cover;
     }
 
     /*SLIDE 4*/
+
     .questime{
-        height: 200px; float: left;
+        height: 110px; float: left;
     }
     
     .gitpic{
-        height: 200px; float: left; margin-right: 40px; margin-bottom: 30px;
+        height: 110px; float: left; margin-right: 22px; margin-bottom: 16px;
     }
     
     .athantime{
-        height: 200px; float: left; margin-right: 30px; margin-bottom: 20px;
+        height: 110px; float: left; margin-right: 16px; margin-bottom: 11px;
     }
-    
+
     .app_name{
         font-size: 3vw;
     }
@@ -444,9 +453,6 @@ background-size: cover;
     .app_desc{
         font-size: 2.6vw;
     }
-
-
-
 
 
     /* SLIDE 5 RESPONSIVENESS*/
@@ -484,6 +490,16 @@ background-size: cover;
 
 @media screen and (max-width: 582px)
 {
+    #slide5{
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+
+
+
+
     nav.active{
         display: block;
         width: 150px;
@@ -507,6 +523,7 @@ background-size: cover;
         color: white;
     }*/
 
+    
 
     .applogo{
         height: 100px;
@@ -514,6 +531,19 @@ background-size: cover;
 
     .center_footer{
         width: 100%;
+    }
+
+
+    .questime{
+        height: 90px; float: left;
+    }
+    
+    .gitpic{
+        height: 90px; float: left; margin-right: 16px; margin-bottom: 10px;
+    }
+    
+    .athantime{
+        height: 90px; float: left; margin-right: 10px; margin-bottom: 5px;
     }
 
     .maaz{
