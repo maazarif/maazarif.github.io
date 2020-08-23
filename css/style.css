@@ -53,6 +53,7 @@ h4{
 p{
     font-family: Oswald;
     padding-top: 0px;
+    color: white; 
 }
 .center{margin: 0 auto;}
 .content{margin: 0 auto; width: 70%;}
@@ -71,7 +72,7 @@ p{
     width: 100%; /* Full width */
     transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
-nav {width: 470px; float:right; margin-top: 10px;}
+nav {width: 470px; float:right; margin-top: 0px; }
 #logo a{
     color: #fff; 
     text-decoration: none; 
@@ -85,18 +86,21 @@ nav {width: 470px; float:right; margin-top: 10px;}
 nav ul{
     display: block;
     margin: 0 auto;
+    
 }
 nav li{
     list-style: none;
     margin-top: 9px;
     float: left;
     padding-left: 21px;
+    color: rgb(0,6,35);
+    
 }
-nav ul li a { color:white; opacity:1; font-size: 18px; text-decoration: none; font-family: 'Wellfleet'; }
+nav ul li a { color:rgb(152, 226, 237); opacity:1; font-size: 18px; text-decoration: none; font-family: Oswald; font-weight: bolder; }
 /*
 nav ul li a.active { color: #fff; opacity:1; border-bottom: 2px solid #fff; }
 */
-nav li a:hover { color: blue; opacity:1; }
+nav li a:hover { color: rgb(255, 255, 255); opacity:1; }
 
 .toggle
 {
@@ -125,9 +129,9 @@ nav li a:hover { color: blue; opacity:1; }
 #slide1, #slide2{ width: 100%; }
 #slide1{
 /*background: url('../img/clear.jpeg') 50% 0 no-repeat fixed;*/
-background: url('../img/illuminated-cityscape-against-blue-sky-at-night-316093.jpg') 50% 0 no-repeat fixed;
-background-color: black;
-color: #000;
+/*background: url('../img/illuminated-cityscape-against-blue-sky-at-night-316093.jpg') 50% 0 no-repeat fixed;*/
+background-color: rgb(0,6,35);
+/*color: #000;*/
 height: 400px;
 margin: 0;
 padding: 200px 0 260px 0; /**/
@@ -135,23 +139,22 @@ background-size: cover;
 }
 #slide2{
 background-color: #000;
-background: url('../img/low-angle-view-of-spiral-staircase-against-black-background-247676.jpg') 50% 0 no-repeat fixed;
-color: white;
+/*background: url('../img/low-angle-view-of-spiral-staircase-against-black-background-247676.jpg') 50% 0 no-repeat fixed;*/
+background-color: rgb(0,6,35);
 height: 600px;
 margin: 0 auto;
 overflow: hidden;
 padding: 200px 0;
 }
 #slide3{
-background-color: rgb(0, 0, 0);
-color: #fff;
+background-color: rgb(0,6,35);
 height: 1000px;
 padding: 150px 0;
 background-size: cover;
 }
 #slide5{
-background: url('../img/abstract-painting-3435264.jpg') 50% 0 no-repeat fixed;
-background-color: #000;
+/*background: url('../img/abstract-painting-3435264.jpg') 50% 0 no-repeat fixed;*/
+background-color: rgb(0,6,35);
 height: 300px;
 margin: 0 auto;
 padding-right: 250px;
@@ -160,6 +163,11 @@ padding-top: 100px;
 padding-bottom: 250px;
 /*padding: 250px 0;*/
 background-size: cover;
+}
+
+
+.about {
+    font-size: 25px;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -430,6 +438,11 @@ background-size: cover;
     nav.active li a{
         display: block;
         font-size: 10px; 
+    }
+
+    /*ABOUT*/
+    .about {
+        font-size: 3.9vw;
     }
 
     /*SLIDE 4*/
