@@ -365,7 +365,7 @@ background-size: cover;
 
 
 /*Responsive app i need a menu icon*/
-@media screen and (max-width: 785px)
+@media screen and (max-width: 795px)
 {
     .content{margin: 0 auto; width: 100%;}
     h1{
@@ -402,7 +402,7 @@ background-size: cover;
 }
 
 /*ACTIVE BUTTONS*/
-@media screen and (max-width: 785px)
+@media screen and (max-width: 795px)
 {
 
     #slide5{
