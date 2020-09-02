@@ -165,6 +165,21 @@ padding-bottom: 250px;
 background-size: cover;
 }
 
+.cv_button{
+    border: 1px solid rgb(152, 226, 237);
+    color: rgb(152, 226, 237);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: relative;
+}
+
+.cv_button:hover{
+    box-shadow: 0px 1px 10px 1px rgb(152, 226, 237);
+}
+
 
 .about {
     font-size: 25px;
@@ -418,12 +433,7 @@ background-size: cover;
     h2{
         margin-left: 0px;
     }
-    h3{
 
-    }
-    h4{
-
-    }
     nav{
         display: none;
     }
@@ -438,6 +448,13 @@ background-size: cover;
     nav.active li a{
         display: block;
         font-size: 10px; 
+    }
+
+
+    /*SLIDE 1*/
+        .cv_button{
+        font-size: 12px;
+        padding: 12px 28px;
     }
 
     /*ABOUT*/
@@ -509,6 +526,14 @@ background-size: cover;
         padding-top: 20px;
         padding-bottom: 50px;
     }
+
+        /*SLIDE 1*/
+        .cv_button{
+            font-size: 10px;
+            padding: 10px 25px;
+        }
+
+
 
 
 
